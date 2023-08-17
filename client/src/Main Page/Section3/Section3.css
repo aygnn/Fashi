@@ -1,0 +1,264 @@
+body a {
+  text-decoration: none;
+  color: #212529;
+  background-color: transparent;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section3 .react-reveal {
+  width: 26% !important;
+}
+.section3 .container {
+  max-width: 88%;
+}
+.section3 .row {
+  display: flex;
+  flex-direction: row;
+}
+.section3 .col-sm-3 {
+  width: 360px;
+}
+.section3 .col-sm-3 .woman {
+  background-image: url("https://images.asos-media.com/products/bershka-strappy-cami-in-black/23636648-4?$n_640w$&wid=513&fit=constrain");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 620px;
+  width: 100%;
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+  padding-top: 285px;
+  transition: 0.3s all;
+}
+.section3 .col-sm-3 .woman h2 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.section3 .col-sm-3 .woman a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  background-color: transparent;
+}
+.section3 .col-sm-3 .woman a::before {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  content: "";
+}
+.section3 .col-sm-3 .woman:hover {
+  transform: scale(1.02);
+  transition: 0.5s all;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.section3 .col-sm-8 .filter-control {
+  text-align: center;
+  margin-bottom: 45px;
+  padding-top: 32px;
+  margin-left: 267px;
+}
+.section3 .col-sm-8 .filter-control ul {
+  display: flex;
+  justify-content: center;
+  margin-left: -130px;
+}
+.section3 .col-sm-8 .filter-control ul li.active {
+  color: rgba(59, 57, 57, 0.8117647059);
+}
+.section3 .col-sm-8 .filter-control ul li {
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+  font-size: 28px;
+  animation-name: myanimate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  text-shadow: 10px 10px 8px #e7ab3c;
+  justify-content: center;
+}
+@keyframes myanimate {
+  0% {
+    text-shadow: 3px 3px 5px #e7ab3c;
+  }
+  25% {
+    text-shadow: 3px 3px 5px #e7ab3c;
+  }
+  50% {
+    text-shadow: 3px 3px 5px #e7ab3c;
+  }
+  75% {
+    text-shadow: 3px 3px 5px red;
+  }
+  100% {
+    text-shadow: 3px 3px 5px rgb(255, 115, 0);
+  }
+}
+.section3 .col-sm-8 .filter-control ul li::after {
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #171717;
+  content: "";
+  opacity: 1;
+  transition: 0.3s;
+}
+.section3 .col-sm-8 .filter-control ul li:hover::after {
+  width: 100%;
+}
+.section3 .col-sm-8 .carusel {
+  width: 112%;
+  margin-left: 8%;
+}
+.section3 .col-sm-8 .carusel .item {
+  width: 282px;
+  height: 447px;
+  position: relative;
+}
+.section3 .col-sm-8 .carusel .item .pic {
+  cursor: pointer;
+  width: 282px;
+  transition: 0.5s ease-in-out;
+  height: 344px;
+  overflow: hidden;
+  position: relative;
+}
+.section3 .col-sm-8 .carusel .item .pic img {
+  width: 282px;
+  height: 344px;
+}
+.section3 .col-sm-8 .carusel .item .pic .icon {
+  font-size: 20px;
+  color: #252525;
+  position: absolute;
+  right: 12%;
+  top: -29px;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.section3 .col-sm-8 .carusel .item .pic ul {
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+  transition: all 0.3s;
+  text-align: center;
+  width: 100%;
+}
+.section3 .col-sm-8 .carusel .item .pic ul li {
+  height: 58px;
+  list-style: none;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 5px;
+}
+.section3 .col-sm-8 .carusel .item .pic ul li a {
+  padding: 16px 12px 12px 11px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #252525;
+  display: block;
+}
+.section3 .col-sm-8 .carusel .item .pic ul li a svg {
+  font-size: 30px;
+}
+.section3 .col-sm-8 .carusel .item .pic ul .active a {
+  font-size: 16px;
+  background: #e7ab3c;
+  color: #ffffff;
+  border-radius: 5px;
+  padding-bottom: 14px;
+}
+.section3 .col-sm-8 .carusel .item .pic:hover .icon {
+  opacity: 1;
+  top: 15px;
+}
+.section3 .col-sm-8 .carusel .item .pic:hover ul {
+  bottom: 0;
+  margin-right: auto;
+}
+.section3 .col-sm-8 .carusel .item .text {
+  text-align: center;
+  margin-top: 3px;
+}
+.section3 .col-sm-8 .carusel .item .text a h5 {
+  text-transform: capitalize;
+}
+.section3 .col-sm-8 .carusel .item .text .catagory-name {
+  font-size: 10px;
+  color: #b2b2b2;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+.section3 .col-sm-8 .carusel .item .text .product-price {
+  color: #e7ab3c;
+  font-size: 20px;
+  font-weight: 700;
+}
+.section3 .col-sm-8 .carusel button {
+  margin-top: -11%;
+  background: transparent;
+}
+
+@media screen and (max-width: 769px) {
+  .section3 .container {
+    margin-right: 47px;
+  }
+  .section3 .row {
+    flex-direction: column;
+  }
+  .section3 .col-sm-3 {
+    width: 750px;
+    margin-left: 7%;
+  }
+  .section3 .col-sm-8 {
+    display: none;
+  }
+  .section3 .col-sm-8 .filter-control {
+    margin-left: 120px;
+  }
+  .section3 .col-sm-8 .filter-control ul li {
+    width: 100%;
+  }
+  .section3 .col-sm-8 .carusel {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 391px) {
+  .section3 .col-sm-3 {
+    width: 360px;
+    margin-left: 20%;
+  }
+  .section3 .woman {
+    width: 366px;
+    margin-left: 0px;
+    margin-right: 0;
+  }
+  .section3 .col-sm-8 .filter-control {
+    width: 100%;
+    margin-left: 9%;
+  }
+  .section3 .col-sm-8 .filter-control ul li {
+    font-size: 20px;
+    margin-right: 0;
+  }
+}/*# sourceMappingURL=Section3.css.map */

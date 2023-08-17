@@ -1,0 +1,75 @@
+.section2 .row {
+  margin: 44px;
+}
+.section2 .card1 {
+  cursor: pointer;
+  width: 443px;
+  height: 248px;
+  position: relative;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+.section2 .card1 img {
+  min-width: 100%;
+  width: 443px;
+  height: 248px;
+  border-radius: 8px;
+}
+.section2 .card1 .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+}
+.section2 .card1 .text h4 {
+  color: #252525;
+  font-weight: 700;
+  padding: 11px 28px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+.section2 .card1:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (max-width: 391px) {
+  .section2 .row {
+    margin: 5px;
+  }
+  .section2 .row .card1 {
+    width: 360px;
+    height: auto;
+  }
+  .section2 .row .card1 img {
+    width: 100%;
+    height: auto;
+    vertical-align: baseline;
+  }
+}
+@media screen and (max-width: 769px) {
+  .section2 .row {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .section2 .row .col-sm-4 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .section2 .row .card1 {
+    width: 100%;
+    height: auto;
+  }
+  .section2 .row .card1 img {
+    width: 100%;
+    height: auto;
+    vertical-align: baseline;
+  }
+}/*# sourceMappingURL=Section2.css.map */

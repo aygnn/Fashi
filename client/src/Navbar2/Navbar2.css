@@ -1,0 +1,131 @@
+.navbar2 {
+  position: relative;
+  background-color: #252525;
+}
+.navbar2 .nav-item .nav-menu .checkbtn {
+  float: right;
+  font-size: 30;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+.navbar2 .nav-item .nav-menu #check {
+  display: none;
+}
+.navbar2 .nav-item .container nav ul {
+  margin-bottom: 0;
+  list-style: none;
+}
+.navbar2 .nav-item .container nav ul li {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  margin-left: -36px;
+  position: relative;
+  z-index: 40;
+}
+.navbar2 .nav-item .container nav ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  color: #ffffff;
+  padding: 16px 45px 15px;
+  padding-right: 50px;
+  transition: all 0.3s;
+  text-align: left;
+  text-decoration: none;
+}
+.navbar2 .nav-item .container nav ul li a:hover {
+  background-color: #e7ab3c;
+  color: white;
+}
+.navbar2 .nav-item .container nav ul li ul {
+  display: none;
+  position: absolute;
+  width: 212px;
+  background-color: #252525;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.navbar2 .nav-item .container nav ul li ul li a:hover {
+  background-color: #252525;
+  color: #e7ab3c;
+}
+.navbar2 .nav-item .container nav ul li:hover > ul {
+  display: flex;
+}
+.navbar2 .nav-item .mobile {
+  display: none;
+}
+.navbar2 .nav-item .mobile i {
+  color: white;
+}
+
+@media screen and (max-width: 391px) {
+  .checkbtn {
+    display: block !important;
+  }
+  #navbar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #252525;
+    top: 80px;
+    left: -100%;
+    transition: 0.5s all;
+    text-align: left;
+  }
+  #navbar li {
+    display: block;
+    margin-left: -22px;
+  }
+  #navbar li a {
+    font-size: 20px;
+  }
+  #check:checked ~ #navbar {
+    left: 0;
+  }
+  .navbar2 {
+    height: 53px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .navbar2 .nav-item .container nav ul li ul {
+    position: relative;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    top: 10px;
+    z-index: 20;
+    left: -85%;
+    width: 300px;
+    height: 92vh;
+    background-color: #252525;
+    padding: 40px 0 0 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: 0.3s ease-in-out;
+  }
+  .mobile {
+    margin-right: 200px;
+    display: block !important;
+    margin-left: 87%;
+  }
+  .mobile i {
+    font-size: 24px !important;
+    cursor: pointer !important;
+  }
+  #navbar.active {
+    left: 0px;
+  }
+}
+@media screen and (max-width: 769px) {
+  #navbar {
+    margin-left: -10px !important;
+  }
+}/*# sourceMappingURL=Navbar2.css.map */

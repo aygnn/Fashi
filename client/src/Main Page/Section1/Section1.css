@@ -1,0 +1,201 @@
+.karusel1 {
+  background-image: url("https://preview.colorlib.com/theme/fashi/img/hero-1.jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 725px;
+  padding-top: 210px;
+}
+.karusel1 .col-sm-5 {
+  text-align: left;
+  margin-left: 4%;
+  margin-top: -1%;
+}
+.karusel1 .col-sm-5 span {
+  transition: all 0.2s ease 0.2s;
+  color: #e7ab3c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 28px;
+  display: inline-block;
+  position: relative;
+  margin-left: 7px;
+  opacity: 1;
+}
+.karusel1 .col-sm-5 h1 {
+  color: #252525;
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  position: relative;
+  opacity: 1;
+}
+.karusel1 .col-sm-5 p {
+  font-size: 16px;
+  font-family: "Muli", sans-serif;
+  color: #636363;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0 0 15px 0;
+}
+.karusel1 .col-sm-5 a {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 30px;
+  color: #ffffff;
+  background: #e7ab3c;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.karusel1 .col-sm-5 .shopnow {
+  cursor: pointer;
+}
+.karusel1 .sale {
+  height: 154px;
+  width: 154px;
+  padding-top: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 140px;
+  position: absolute;
+  left: 49%;
+  top: 9%;
+  background: #e7ab3c;
+  z-index: 1;
+}
+.karusel1 .sale h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.karusel1 .sale span {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: -50px;
+}
+.karusel1 .sale::after {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border: 2px dashed #ffffff;
+  content: "";
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.animate__animated.animate__slideInUp {
+  --animate-duration: 0.9s;
+}
+
+.karusel2 {
+  background-image: url("https://preview.colorlib.com/theme/fashi/img/hero-2.jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 725px;
+  padding-top: 210px;
+}
+.karusel2 .col-sm-5 {
+  text-align: left;
+  margin-left: 4%;
+  margin-top: -1%;
+}
+.karusel2 .col-sm-5 span {
+  transition: all 0.2s ease 0.2s;
+  color: #e7ab3c;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 7px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 28px;
+  display: inline-block;
+  position: relative;
+  opacity: 1;
+}
+.karusel2 .col-sm-5 h1 {
+  color: #252525;
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  position: relative;
+  opacity: 1;
+}
+.karusel2 .col-sm-5 p {
+  font-size: 16px;
+  font-family: "Muli", sans-serif;
+  color: #636363;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0 0 15px 0;
+}
+.karusel2 .col-sm-5 a {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 30px;
+  color: #ffffff;
+  background: #e7ab3c;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.karusel2 .col-sm-5 .shopnow {
+  cursor: pointer;
+}
+.karusel2 .sale {
+  height: 154px;
+  width: 154px;
+  padding-top: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 140px;
+  position: absolute;
+  left: 49%;
+  top: 9%;
+  background: #e7ab3c;
+  z-index: 1;
+}
+.karusel2 .sale h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.karusel2 .sale span {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: -50px;
+}
+.karusel2 .sale::after {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border: 2px dashed #ffffff;
+  content: "";
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.animate__animated.animate__slideInUp {
+  --animate-duration: 0.9s;
+}
+
+.carousel {
+  z-index: -1;
+}/*# sourceMappingURL=Section1.css.map */

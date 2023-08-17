@@ -1,0 +1,388 @@
+.viewbag {
+  background-color: #eee;
+}
+.viewbag .col-sm-8 {
+  margin-top: 13px;
+  width: 49.666667%;
+}
+.viewbag .bag-content {
+  padding: 24px 30px;
+  margin-bottom: 8px;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+.viewbag .bag-content h1 {
+  margin: 0;
+  font-size: 1.15em;
+  font-family: futura-pt-n7, futura-pt, "Futura PT", "Futura Book", Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  line-height: 22px;
+}
+.viewbag .bag-content p {
+  margin: 0;
+  float: right;
+  line-height: 20px;
+  font-size: 0.88em;
+  letter-spacing: 0.6px;
+}
+.viewbag .content {
+  background-color: white;
+}
+.viewbag .content .fav-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.viewbag .content .fav-empty .empty {
+  width: 59px;
+  margin-top: 24px;
+  margin-bottom: 15px;
+}
+.viewbag .content .fav-empty .empty img {
+  width: 100%;
+}
+.viewbag .content .fav-empty .text-empty h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 24px;
+  margin: 0 16px;
+}
+.viewbag .content .fav-empty .text-empty .button-6 {
+  margin-top: 20px;
+  margin-bottom: 21px;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: 5px 66px 10px;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+.viewbag .content .fav-empty .text-empty .button-6 a:hover {
+  color: #e7ab3c;
+}
+.viewbag .content .fav-empty .text-empty .button-6:hover,
+.viewbag .content .fav-empty .text-empty .button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.viewbag .content .fav-empty .text-empty .button-6:hover {
+  transform: translateY(-1px);
+  color: #e7ab3c;
+}
+.viewbag .content .fav-empty .text-empty .button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+.viewbag .content .bag-item {
+  padding: 20px;
+  display: flex;
+}
+.viewbag .content .bag-item .bag-left {
+  width: 110px;
+  height: 140px;
+}
+.viewbag .content .bag-item .bag-left img {
+  width: 100%;
+}
+.viewbag .content .bag-item .bag-right {
+  text-align: left;
+  padding: 15px;
+  width: 66%;
+}
+.viewbag .content .bag-item .bag-right .price {
+  line-height: 0.7em;
+  padding: 0 0 10px;
+}
+.viewbag .content .bag-item .bag-right .price span {
+  color: #2d2d2d;
+  font-family: futura-pt-n7, futura-pt, "Futura PT", "Futura Book", Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  padding-right: 0.3em;
+  letter-spacing: 1.7px;
+}
+.viewbag .content .bag-item .bag-right .name p {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.5em;
+  max-height: 3.1em;
+  text-decoration: none;
+  color: #2d2d2d;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+  overflow: hidden;
+  padding: 0 25px 8px 0;
+}
+.viewbag .content .bag-item .bag-right .name p:hover {
+  color: blue;
+  transition: 0.2s all;
+}
+.viewbag .content .bag-item .bag-right .variable {
+  font-size: 19px;
+  font-size: 19px;
+  gap: 51px;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+}
+.viewbag .content .bag-item .bag-right .variable span {
+  border-right: 1px solid #eee;
+  display: inline-block;
+  margin: 0 3px 0 0;
+  padding: 0 8px 0 0;
+  color: #666;
+}
+.viewbag .content .bag-item .bag-right .variable span select {
+  margin: 0 6px 0 0;
+  border: none;
+  background-position: right 11px center;
+  background-color: #fff;
+  font-size: 0.75em;
+  font-family: futura-pt-n4, futura-pt, "Futura PT", Futura, Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  letter-spacing: 0.4px;
+  color: #666;
+  margin-right: 0.6em;
+  overflow: hidden;
+}
+.viewbag .content .bag-item .bag-right .variable .span1 {
+  font-size: 0.75em;
+  letter-spacing: 0.6px;
+}
+.viewbag .content .bag-item .bag-right .variable .span2 {
+  margin-right: 10px;
+}
+.viewbag .content .bag-item .bag-right .variable .span3 {
+  margin-left: -31px;
+}
+.viewbag .content .bag-item .bag-right .variable .span3 button {
+  border: 0;
+  background: transparent;
+}
+.viewbag .content .bag-item .bag-right .variable .span3 button svg {
+  color: #666;
+}
+.viewbag .content .bag-item .bag-right .save .save-fav {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2214px%22%20height%3D%2213px%22%20viewBox%3D%22-1%20-1%2015%2015%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20id%3D%22Desktop%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Desktop_bag%22%20transform%3D%22translate(-302.000000%2C%20-716.000000)%22%20stroke%3D%22%232D2D2D%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M02_your_items%22%20transform%3D%22translate(132.000000%2C%20315.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22product_2%22%20transform%3D%22translate(30.000000%2C%20280.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Save%22%20transform%3D%22translate(130.000000%2C%20112.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M16.4971144%2C10.1751535%20C15.8069078%2C9.45246798%2014.8600012%2C9.0058477%2013.8150562%2C9.00719656%20C11.7057556%2C9.00959452%209.99817292%2C10.8348926%2010.0000015%2C13.0823817%20C10.0060497%2C18.2466909%2016.5093516%2C21%2016.5093516%2C21%20C16.5093516%2C21%2023.0070272%2C18.2300551%2022.9999943%2C13.064397%20C22.9973218%2C10.816758%2021.2855194%2C8.99745484%2019.1756561%2C9.00000267%20C18.1318365%2C9.00075204%2017.1856331%2C9.44992014%2016.4971144%2C10.1751535%20Z%22%20id%3D%22Shape-Copy-7%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: 8px center;
+  border: 1px solid #eee;
+  color: #2d2d2d;
+  cursor: pointer;
+  font-size: 0.75em;
+  letter-spacing: 0.4px;
+  margin-top: 4px;
+  padding: 6px 13px 6px 30px;
+  position: relative;
+}
+.viewbag .content .bag-item .bag-right .save .save-active {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2214px%22%20height%3D%2213px%22%20viewBox%3D%22-1%20-1%2015%2015%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20id%3D%22Desktop%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22%232D2D2D%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Desktop_bag%22%20transform%3D%22translate(-302.000000%2C%20-716.000000)%22%20stroke%3D%22%232D2D2D%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M02_your_items%22%20transform%3D%22translate(132.000000%2C%20315.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22product_2%22%20transform%3D%22translate(30.000000%2C%20280.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Save%22%20transform%3D%22translate(130.000000%2C%20112.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M16.4971144%2C10.1751535%20C15.8069078%2C9.45246798%2014.8600012%2C9.0058477%2013.8150562%2C9.00719656%20C11.7057556%2C9.00959452%209.99817292%2C10.8348926%2010.0000015%2C13.0823817%20C10.0060497%2C18.2466909%2016.5093516%2C21%2016.5093516%2C21%20C16.5093516%2C21%2023.0070272%2C18.2300551%2022.9999943%2C13.064397%20C22.9973218%2C10.816758%2021.2855194%2C8.99745484%2019.1756561%2C9.00000267%20C18.1318365%2C9.00075204%2017.1856331%2C9.44992014%2016.4971144%2C10.1751535%20Z%22%20id%3D%22Shape-Copy-7%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: 8px center;
+  border: 1px solid #eee;
+  color: #2d2d2d;
+  cursor: pointer;
+  font-size: 0.75em;
+  letter-spacing: 0.4px;
+  margin-top: 4px;
+  padding: 6px 13px 6px 30px;
+  position: relative;
+}
+.viewbag .content .bag-item .bag-right .save .save-fav:hover {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2214px%22%20height%3D%2213px%22%20viewBox%3D%22-1%20-1%2015%2015%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20id%3D%22Desktop%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22%232D2D2D%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Desktop_bag%22%20transform%3D%22translate(-302.000000%2C%20-716.000000)%22%20stroke%3D%22%232D2D2D%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M02_your_items%22%20transform%3D%22translate(132.000000%2C%20315.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22product_2%22%20transform%3D%22translate(30.000000%2C%20280.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Save%22%20transform%3D%22translate(130.000000%2C%20112.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M16.4971144%2C10.1751535%20C15.8069078%2C9.45246798%2014.8600012%2C9.0058477%2013.8150562%2C9.00719656%20C11.7057556%2C9.00959452%209.99817292%2C10.8348926%2010.0000015%2C13.0823817%20C10.0060497%2C18.2466909%2016.5093516%2C21%2016.5093516%2C21%20C16.5093516%2C21%2023.0070272%2C18.2300551%2022.9999943%2C13.064397%20C22.9973218%2C10.816758%2021.2855194%2C8.99745484%2019.1756561%2C9.00000267%20C18.1318365%2C9.00075204%2017.1856331%2C9.44992014%2016.4971144%2C10.1751535%20Z%22%20id%3D%22Shape-Copy-7%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+}
+.viewbag .content .bag-item .bag-end {
+  margin-left: 9%;
+}
+.viewbag .content .bag-item .bag-end button {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2216px%22%20height%3D%2216px%22%20viewBox%3D%22-1%20-1%2017%2017%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20id%3D%22Desktop%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Desktop_bag%22%20transform%3D%22translate(-636.000000%2C%20-429.000000)%22%20fill%3D%22%232D2D2D%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M02_your_items%22%20transform%3D%22translate(132.000000%2C%20315.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22product_1%22%20transform%3D%22translate(30.000000%2C%20100.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22icon_close_normal%22%20transform%3D%22translate(458.000000%2C%200.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M23%2C21%20L14%2C21%20L14%2C23%20L23%2C23%20L23%2C32%20L25%2C32%20L25%2C23%20L34%2C23%20L34%2C21%20L25%2C21%20L25%2C12%20L23%2C12%20L23%2C21%20Z%22%20id%3D%22Rectangle-920-Copy%22%20transform%3D%22translate(24.000000%2C%2022.000000)%20rotate(-315.000000)%20translate(-24.000000%2C%20-22.000000)%20%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center center;
+  border: none;
+  cursor: pointer;
+  height: 16px;
+  overflow: hidden;
+  text-indent: 32px;
+  width: 16px;
+  padding: 0;
+}
+.viewbag .bag-subtotal {
+  letter-spacing: 2px;
+  font-family: futura-pt-n7, futura-pt, "Futura PT", "Futura Book", Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.375em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  text-align: right;
+  margin: 8px 0 21px;
+  padding: 24px;
+  background-color: #fff;
+}
+.viewbag .col-sm-4 {
+  margin-top: 13px;
+}
+.viewbag .col-sm-4 .sub-total {
+  width: 360px;
+  height: 317px;
+  background-color: #fff;
+}
+.viewbag .col-sm-4 .sub-total .main-total {
+  padding: 24px 30px;
+  padding-bottom: 16px;
+  text-align: left;
+}
+.viewbag .col-sm-4 .sub-total .title h2 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 24px;
+  margin-bottom: 14px;
+  margin: 0;
+  font-size: 1.15em;
+  font-family: futura-pt-n7, futura-pt, "Futura PT", "Futura Book", Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  line-height: 22px;
+}
+.viewbag .col-sm-4 .sub-total .total {
+  margin-top: 14px;
+  margin-bottom: 15px;
+}
+.viewbag .col-sm-4 .sub-total .total .total1 {
+  font-weight: 700;
+}
+.viewbag .col-sm-4 .sub-total .total .total2 {
+  float: right;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.viewbag .col-sm-4 .sub-total .delivery {
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.viewbag .col-sm-4 .sub-total .delivery span {
+  font-weight: 700;
+}
+.viewbag .col-sm-4 .sub-total .delivery a {
+  margin-left: 18.5%;
+  color: #999;
+  border: 2px solid #999;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%202%208%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22translate(-7.000000%2C%20-4.000000)%22%20fill%3D%22%23979797%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22translate(7.000000%2C%204.000000)%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%3E%3C%2Fcircle%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%223%22%20width%3D%222%22%20height%3D%225%22%3E%3C%2Frect%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-size: 2px 8px;
+  background-position: center;
+  border-radius: 50%;
+  text-decoration: none;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  position: absolute;
+  line-height: 13px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: HelveticaNeue, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.viewbag .col-sm-4 .sub-total .check p {
+  text-decoration: none;
+  letter-spacing: 1.9px;
+  max-width: 100%;
+  background: #018849;
+  color: #fff;
+  width: 300px;
+  height: 44px;
+  font-family: futura-pt-n7, futura-pt, "Futura PT", "Futura Book", Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  display: block;
+  font-size: 0.875em;
+  line-height: 1em;
+  margin: 0 auto;
+  padding: 1.0714285714em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.viewbag .col-sm-4 .sub-total .check p:hover {
+  background-color: #006637;
+}
+.viewbag .col-sm-4 .sub-total .accept .we {
+  text-transform: uppercase;
+  font-size: 0.875em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  margin-top: 13px;
+}
+.viewbag .col-sm-4 .sub-total .accept img {
+  width: 192px;
+  height: 21px;
+  margin-bottom: 10px;
+}
+.viewbag .col-sm-4 .sub-total .accept .code p {
+  box-sizing: border-box;
+  font-family: futura-pt-n7, futura-pt, "Futura PT", "Futura Book", Tahoma, Geneva, Verdana, Arial, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font: inherit;
+  vertical-align: baseline;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 391px) {
+  .viewbag .col-sm-8 {
+    width: 100%;
+  }
+  .viewbag .col-sm-8 .bag-item .variable {
+    margin-left: -80px;
+    padding: 0;
+  }
+  .viewbag .col-sm-8 .bag-item .variable .span3 {
+    margin-left: -31px;
+    display: flex !important;
+  }
+}/*# sourceMappingURL=Viewbag.css.map */

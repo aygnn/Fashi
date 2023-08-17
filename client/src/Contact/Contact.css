@@ -1,0 +1,228 @@
+.contact .text {
+  display: flex;
+  border-bottom: 1px solid #ebebeb;
+  padding: 15px 0;
+}
+.contact .text a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #252525;
+  margin-right: 28px;
+  position: relative;
+  text-decoration: none;
+}
+.contact .text a::after {
+  position: absolute;
+  right: -18px;
+  top: 0px;
+  content: ">";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  color: #b2b2b2;
+}
+.contact .text span {
+  display: inline-block;
+  color: #b2b2b2;
+}
+.contact .map {
+  margin-top: 5%;
+}
+.contact .map .maps {
+  width: 100%;
+  height: 610px;
+}
+.contact .contact-area {
+  margin-left: 6%;
+  padding-top: 75px;
+  padding-bottom: 20px;
+}
+.contact .contact-area .contact-title {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.contact .contact-area .contact-title h4 {
+  color: #252525;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: "Muli", sans-serif;
+}
+.contact .contact-area .contact-title p {
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 18px;
+  color: #252525;
+  margin: 0 0 15px 0;
+}
+.contact .contact-area .contact-widget .widget-item {
+  width: 457px;
+  background: #ffffff;
+  margin-bottom: 11px;
+  box-shadow: 0px 8px 35px 10px #e8e8e8;
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+.contact .contact-area .contact-widget .widget-item .icon {
+  float: left;
+  font-size: 30px;
+  color: #b2b2b2;
+}
+.contact .contact-area .contact-widget .widget-item .contact-text {
+  display: table;
+  text-align: left;
+  padding-left: 30px;
+}
+.contact .contact-area .contact-widget .widget-item .contact-text span {
+  color: #b2b2b2;
+  font-size: 16px;
+  font-family: "Muli", sans-serif;
+}
+.contact .contact-area .contact-widget .widget-item .contact-text p {
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 18px;
+  color: #252525;
+  margin: 0 0 15px 0;
+}
+.contact .contact-area .comment-inputs .part1 {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.contact .contact-area .comment-inputs .part1 div {
+  width: 262px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+.contact .contact-area .comment-inputs .part1 div input {
+  width: 100%;
+  font-size: 16px;
+  color: #636363;
+  height: 50px;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.contact .contact-area .comment-inputs .part1 div input:focus {
+  outline: none;
+}
+.contact .contact-area .comment-inputs .part2 div {
+  width: 555px;
+  height: 150px;
+}
+.contact .contact-area .comment-inputs .part2 div input {
+  width: 100%;
+  resize: none;
+  font-size: 16px;
+  color: #636363;
+  height: 150px;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.contact .contact-area .comment-inputs .part2 div input:focus {
+  outline: none;
+}
+.contact .contact-area .comment-inputs .part2 div input::-moz-placeholder {
+  margin-top: 10x;
+}
+.contact .contact-area .comment-inputs .part2 div input::placeholder {
+  margin-top: 10x;
+}
+.contact .contact-area .comment-inputs .part3 {
+  text-align: left;
+  margin-top: 7%;
+}
+.contact .contact-area .comment-inputs .part3 .site-btn {
+  padding: 12px 29px 12px;
+  cursor: pointer;
+  color: #ffffff;
+  background: #e7ab3c;
+  border: 1px solid #e7ab3c;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.contact .contact-area .comment-inputs .part3 .toastt {
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 550;
+  border: 0;
+  background-color: #e7ab3c;
+}
+.contact .contact-area .comment-inputs .part3 .toastt:focus {
+  outline: none;
+}
+.contact .contact-area .comment-inputs .part3 .toastt:focus .Toastify__progress-bar--success {
+  background-color: #e7ab3c !important;
+}
+.contact .contact-area .comment-inputs .part3 .toastt:focus .Toastify__progress-bar-theme--light {
+  background-color: #e7ab3c !important;
+}
+.contact .contact-area .col-sm-7 {
+  margin-left: 60px;
+  width: 49.333333% !important;
+}
+
+@media screen and (max-width: 391px) {
+  .map .maps {
+    width: 100%;
+    height: 690px;
+  }
+  .widget-item {
+    width: 360px !important;
+  }
+  .contact-title {
+    width: 100%;
+  }
+  .col-sm-7 {
+    margin-left: 0 !important;
+  }
+  .part1 {
+    display: block !important;
+  }
+  .part1 div {
+    width: 360px !important;
+  }
+  .part1 div input {
+    width: 100% !important;
+  }
+  .part2 div {
+    width: 360px !important;
+  }
+  .part2 div input {
+    width: 100% !important;
+  }
+  .site-btn {
+    padding: 11px 16px 11px !important;
+  }
+}
+@media screen and (max-width: 769px) {
+  .map .maps {
+    width: 100%;
+    height: 690px;
+  }
+  .contact-area .row {
+    flex-direction: column;
+  }
+  .contact-area .row .col-sm-5 {
+    width: 100%;
+  }
+  .contact-area .row .col-sm-5 .contact-title {
+    width: 100%;
+  }
+  .contact-area .row .col-sm-5 .contact-widget .widget-item {
+    width: 100%;
+  }
+  .contact-area .row .col-sm-7 {
+    margin-left: 0;
+    width: 100% !important;
+  }
+}/*# sourceMappingURL=Contact.css.map */
