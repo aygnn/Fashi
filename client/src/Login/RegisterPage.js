@@ -88,7 +88,7 @@ export default function RegisterPage() {
               validateOnChange={false}
               onSubmit={async (values, { resetForm }) => {
                 axios
-                  .post("https://fashi-pbtgesky2-aygnn.vercel.app/auth", values)
+                  .post("https://fashi-git-master-aygnn.vercel.app/auth", values)
                   .then((res) => console.log(res));
                 resetForm();
                 // console.log(values)
