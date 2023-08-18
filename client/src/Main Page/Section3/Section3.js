@@ -87,7 +87,7 @@ const handleDetail=(id)=>{
 
   const getProducts = () => {
     axios
-      .get("https://fashi-pbtgesky2-aygnn.vercel.app/products")
+      .get("https://fashi-git-master-aygnn.vercel.app/products")
       .then((res) => setProducts(res.data));
   };
   useEffect(() => {

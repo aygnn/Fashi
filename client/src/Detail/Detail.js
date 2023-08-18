@@ -27,7 +27,7 @@ export default function Detail() {
 
   const getProducts = () => {
     axios
-      .get("https://fashi-pbtgesky2-aygnn.vercel.app/products")
+      .get("https://fashi-git-master-aygnn.vercel.app/products")
       .then((res) => setProducts(res.data));
   };
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function Detail() {
   let { proID } = useParams();
   useEffect(() => {
     axios
-      .get(`https://fashi-pbtgesky2-aygnn.vercel.app/products/${proID}`)
+      .get(`https://fashi-git-master-aygnn.vercel.app/products/${proID}`)
       .then((res) => setProduct(res.data));
   }, []);
   console.log(product.image);

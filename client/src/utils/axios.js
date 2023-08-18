@@ -1,6 +1,6 @@
 import axios from 'axios'
 const instance = axios.create({
-    baseURL: 'https://fashi-pbtgesky2-aygnn.vercel.app',
+    baseURL: 'https://fashi-git-master-aygnn.vercel.app',
 })
 
 instance.interceptors.request.use((config) => {

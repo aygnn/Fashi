@@ -134,7 +134,7 @@ console.log(checked);
   };
 
   const getProducts = () => {
-    axios.get("https://fashi-pbtgesky2-aygnn.vercel.app/products").then((res) => {
+    axios.get("https://fashi-git-master-aygnn.vercel.app/products").then((res) => {
       setProducts(res.data);
       setFilter(res.data);
       setDefaultt(res.data);

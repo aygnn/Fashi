@@ -80,7 +80,7 @@ export default function LoginPage() {
                 validationSchema={Login}  
                 onSubmit={async (values) => {
                   axios
-                    .post("https://fashi-pbtgesky2-aygnn.vercel.app/auth", values)
+                    .post("https://fashi-git-master-aygnn.vercel.app/auth", values)
                     .then((res) => {
                       users.forEach((element) => {
                         if (element.username === res.data.data.username) {
