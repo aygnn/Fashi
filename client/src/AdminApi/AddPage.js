@@ -91,7 +91,7 @@ export default function Admin() {
                 validateOnBlur={false}
                 validateOnChange={false}
                 onSubmit={ async(values,{ resetForm })=>{
-                  await axios.post('https://final-code-project-server.vercel.app/products',values)
+                  await axios.post('https://fashi-pbtgesky2-aygnn.vercel.app/products',values)
                   .then(res=>console.log(res.data))
                   console.log(values);
                 resetForm();

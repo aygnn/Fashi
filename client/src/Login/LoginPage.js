@@ -42,7 +42,7 @@ export default function LoginPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(" https://final-code-project-server.vercel.app/auth").then((res) => setUsers(res.data));
+    axios.get("https://fashi-pbtgesky2-aygnn.vercel.app/auth").then((res) => setUsers(res.data));
   }, []);
 
   return (
@@ -80,7 +80,7 @@ export default function LoginPage() {
                 validationSchema={Login}  
                 onSubmit={async (values) => {
                   axios
-                    .post("https://final-code-project-server.vercel.app/auth", values)
+                    .post("https://fashi-pbtgesky2-aygnn.vercel.app/auth", values)
                     .then((res) => {
                       users.forEach((element) => {
                         if (element.username === res.data.data.username) {

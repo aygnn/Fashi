@@ -15,7 +15,7 @@ export default function Users() {
   const[users,setUsers]=useState([])
 
 const getUsers=()=>{
-  axios.get('https://final-code-project-server.vercel.app/auth')
+  axios.get('https://fashi-pbtgesky2-aygnn.vercel.app/auth')
   .then(res=>setUsers(res.data))
 
 }

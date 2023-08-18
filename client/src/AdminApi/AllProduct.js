@@ -9,7 +9,7 @@ export default function AllProduct() {
     const [products,setProducts]=useState([])
 
     const getProducts=()=>{
-        axios.get('https://final-code-project-server.vercel.app/products')
+        axios.get('https://fashi-pbtgesky2-aygnn.vercel.app/products')
         .then(res=>setProducts(res.data))
     }
     useEffect(()=>{
@@ -18,7 +18,7 @@ export default function AllProduct() {
     },[])
 
     const handleDelete= async(id)=>{
-        await axios.delete(`https://final-code-project-server.vercel.app/products/${id}`)
+        await axios.delete(`https://fashi-pbtgesky2-aygnn.vercel.app/products/${id}`)
         getProducts()
         
     }

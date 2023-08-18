@@ -67,7 +67,7 @@ export default function Section4() {
 
   const getProducts = () => {
     axios
-      .get("https://final-code-project-server.vercel.app/products")
+      .get("https://fashi-pbtgesky2-aygnn.vercel.app/products")
       .then((res) => setProducts(res.data));
   };
   useEffect(() => {
