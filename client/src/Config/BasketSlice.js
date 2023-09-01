@@ -54,7 +54,12 @@ const Basketslice = createSlice({
         _id: user._id,
       };
       localStorage.setItem("user", JSON.stringify(userr));
-  axios.put(`https://fashi-virid.vercel.app/auth/${user._id}`, userr)
+   axios.put(`https://fashi-virid.vercel.app/auth/${user._id}`, userr, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      
       toast.success(" Product added Basket!", {
         position: "top-right",
         autoClose: 2400,

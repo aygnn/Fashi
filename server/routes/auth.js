@@ -1,5 +1,5 @@
 import { Router } from 'express'
- import {login,postUser,getUsers,getUserById} from '../controllers/auth.js'
+ import {login,postUser,getUsers,getUserById,UpdateUser} from '../controllers/auth.js'
 
 
 
@@ -24,6 +24,10 @@ router.get('/auth',getUsers)
 //get by id 
 
 router.get('/auth/:id', getUserById);
+
+
+//UPDATE
+router.put("/auth/:id", UpdateUser)
 
 export default router
 

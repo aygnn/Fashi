@@ -12,7 +12,6 @@ export const postUser = Asyncerror(async (req, res, next) => {
     password,
     userwishlist,
     usercheckout,
-    posts,
     email,
     subtotal,
     basketCount,
@@ -78,3 +77,14 @@ export const getUserById = Asyncerror(async (req, res) => {
     }
   });
 });
+export const UpdateUser = async (req, res, next) => {
+  const { id } = req.params
+  try {
+      User.findByIdAndUpdate(id, req.body, (doc) => {
+          res.status(200).json({ message: "Update" })
+      })
+  } catch (err) {
+      next(err)
+  }
+
+}
