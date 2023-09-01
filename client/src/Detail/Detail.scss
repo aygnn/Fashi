@@ -160,16 +160,17 @@
                         padding-bottom: 9px;
                         padding-left: 14px;
                         outline: none;
-   
-    padding: 7px 10% 7px 8px;
-    border-radius: 0;
+                        padding: 7px 10% 7px 8px;
+                        border-radius: 0;
     option{
         color: #2d2d2d;
-          text-transform: capitalize;
-    
+        text-transform: capitalize;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: .4px;
+        .stock{
+            color: red;
+        }
     }
 }
                     }
@@ -208,13 +209,13 @@
                         height: 40px;
                         background-color: #eee;
                         .favitem{
+                            cursor: pointer;
                             top: 9px;
                             background-image: url(data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2214px%22%20height%3D%2213px%22%20viewBox%3D%22-1%20-1%2015%2015%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Cg%20id%3D%22Desktop%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Desktop_bag%22%20transform%3D%22translate%28-302.000000%2C%20-716.000000%29%22%20stroke%3D%22%232D2D2D%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22M02_your_items%22%20transform%3D%22translate%28132.000000%2C%20315.000000%29%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22product_2%22%20transform%3D%22translate%2830.000000%2C%20280.000000%29%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Save%22%20transform%3D%22translate%28130.000000%2C%20112.000000%29%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M16.4971144%2C10.1751535%20C15.8069078%2C9.45246798%2014.8600012%2C9.0058477%2013.8150562%2C9.00719656%20C11.7057556%2C9.00959452%209.99817292%2C10.8348926%2010.0000015%2C13.0823817%20C10.0060497%2C18.2466909%2016.5093516%2C21%2016.5093516%2C21%20C16.5093516%2C21%2023.0070272%2C18.2300551%2022.9999943%2C13.064397%20C22.9973218%2C10.816758%2021.2855194%2C8.99745484%2019.1756561%2C9.00000267%20C18.1318365%2C9.00075204%2017.1856331%2C9.44992014%2016.4971144%2C10.1751535%20Z%22%20id%3D%22Shape-Copy-7%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E);
                             background-repeat: no-repeat;
                             background-color: transparent;
                             background-position: 7px center;
                             color: black;
-                            cursor: pointer;
                             letter-spacing: 0.4px;
                             margin-top: -1px;
                             padding: 19px 16px 4px 20px;

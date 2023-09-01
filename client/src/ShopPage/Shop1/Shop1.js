@@ -53,7 +53,7 @@ export default function Shop1() {
      },3000)
   },[])
 
-  console.log(useLocation());
+  // console.log(useLocation());
   const [searchParams, setSearchParams] = useSearchParams();
 
   const postQuery = searchParams.get('post') || '';

@@ -1,12 +1,12 @@
 import { Router } from 'express'
- import {login,postUser,getUsers} from '../controllers/auth.js'
+ import {login,postUser,getUsers,getUserById} from '../controllers/auth.js'
 
 
 
 const router = new Router()
 
 // Register
-// http://localhost:6060/products/auth/register
+// http://localhost:6060/products/auth
 router.post('/auth', postUser)
 
 
@@ -20,7 +20,10 @@ router.post('/login', login)
 // Get Me
 // http://localhost:6060/products/auth/me
 router.get('/auth',getUsers)
-// router.get('/getusers', getUsers);
+
+//get by id 
+
+router.get('/auth/:id', getUserById);
 
 export default router
 

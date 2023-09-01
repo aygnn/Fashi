@@ -36,38 +36,25 @@ const Basketslice = createSlice({
             element.count = element.count + 1;
             state.count += 1;
             state.total = state.total + actions.payload.price;
-
-            let userr = {
-              username: user.username,
-              password: user.password,
-              posts: user.posts,
-              userwishlist: state.favstate,
-              usercheckout: state.value,
-              basketCount: state.count,
-              subtotal: state.total,
-              _id: user._id,
-            };
-            localStorage.setItem("user", JSON.stringify(userr));
           }
         });
       } else {
         state.value.push({ count: 1, dataa: actions.payload });
-        state.total += actions.payload.price;
-
-        let userr = {
-          username: user.username,
-          password: user.password,
-          posts: user.posts,
-          userwishlist: state.favstate,
-          usercheckout: state.value,
-          basketCount: state.count,
-          subtotal: state.total,
-          _id: user._id,
-        };
-        localStorage.setItem("user", JSON.stringify(userr));
+        state.total += actions.payload.price
         state.count += 1;
       }
-
+      let userr = {
+        username: user.username,
+        password: user.password,
+        posts: user.posts,
+        userwishlist: state.favstate,
+        usercheckout: state.value,
+        basketCount: state.count,
+        subtotal: state.total,
+        _id: user._id,
+      };
+      localStorage.setItem("user", JSON.stringify(userr));
+  axios.put(`https://fashi-virid.vercel.app/auth/${user._id}`, userr)
       toast.success(" Product added Basket!", {
         position: "top-right",
         autoClose: 2400,
@@ -133,18 +120,16 @@ const Basketslice = createSlice({
         state.favstate.push({ dataa: actions.payload });
         state.favcount = state.favcount + 1;
         
-   
-
         const fav = {
           username: user.username,
           password: user.password,
-          usercheckout: user.usercheckout,
           posts: user.posts,
           userwishlist: state.favstate,
           usercheckout: state.value,
           _id: user._id,
         };
         localStorage.setItem("user", JSON.stringify(fav));
+        // axios.put(`http://localhost:6060/auth/${user._id}`, fav)
         toast.success(" Product added Favs!", {
           position: "top-right",
           autoClose: 2400,
@@ -172,6 +157,8 @@ const Basketslice = createSlice({
         _id: user._id,
       };
       localStorage.setItem("user", JSON.stringify(fav));
+      // axios.put(`http://localhost:6060/auth/${user._id}`, fav)
+
     },
 
     decrementproduct: (state, actions) => {

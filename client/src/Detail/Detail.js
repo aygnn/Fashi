@@ -50,7 +50,7 @@ export default function Detail() {
   };
   const handleFav = (item) => {
     let userWish = JSON.parse(localStorage.getItem("user"));
-    console.log(userWish);
+    // console.log(userWish);
 
     if (userWish === null) {
       alert("You must login first!");
@@ -69,7 +69,7 @@ export default function Detail() {
       .get(`https://fashi-git-master-aygnn.vercel.app/products/${proID}`)
       .then((res) => setProduct(res.data));
   }, []);
-  console.log(product.image);
+  // console.log(product.image);
 
   const mainImgRef = useRef();
   const miniRef = useRef();
@@ -78,7 +78,7 @@ export default function Detail() {
     mainImgRef.current.src = img;
     // console.log(mainImgRef.current);
 
-    console.log(miniRef.current);
+    // console.log(miniRef.current);
   };
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -153,11 +153,14 @@ export default function Detail() {
                   <div className="size-select">
                     <select>
                       <option>Please Select</option>
+                      {
+                        product.sizes?.map((item)=>(
+                          <option  key={item._id}>{item.label}-Stock({item.quantity})</option>
 
-                      <option>{product.size?.size1}</option>
-                      <option>{product.size?.size2}</option>
-                      <option>{product.size?.size3}</option>
-                      <option>{product.size?.size4}</option>
+                        ))
+                      }
+
+                    
                     </select>
                   </div>
                 </div>
@@ -274,8 +277,8 @@ export default function Detail() {
                   item.gender === product.gender
                 ) {
                   return (
-                    <div className="main">
-                      <div className="rel_product" key={item._id}>
+                    <div key={item._id} className="main">
+                      <div className="rel_product" >
                         <div className="rel_img">
                           <img
                             onClick={() => handleDetail(item._id)}

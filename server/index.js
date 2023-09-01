@@ -4,10 +4,13 @@ import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import cors from 'cors'
+// import wishlistController from './controllers/wishlistController.js';
 
 
 const app = express();
 app.use(bodyParser.json());
+// app.use('/wishlist', wishlistController);
+
 app.use(cors());
 dotenv.config();
 
@@ -30,35 +33,23 @@ mongoose.connect(url, (err) => {
 
 const Schema = mongoose.Schema;
 const imageSchema = new Schema({
-img:{type: String,required: true,} 
+  img: { type: String, required: true },
 });
 
-let products = new Schema({
+const sizeSchema = new Schema({
+  label: { type: String, required: true }, // Ölçü adı (örneğin: Small, Medium, Large)
+  quantity: { type: Number, default: 0 }, // Ölçüye ait stok miktarı
+});
+
+const products = new Schema({
   image1: { type: String, required: true },
-  // image2: { type: String, required: true },
-  // image3: { type: String, required: true },
-  // image4: { type: String, required: true },
-  // image:{
-  //   img:{type: String, required: true},
-  //   img:{type: String, required: true},
-  //   img:{type: String, required: true},
-  //   img:{type: String, required: true},
-
-  // },
-  image:[imageSchema],
-  gender:{type: String, required: true},
-  size:{
-    size1:{type: String, required: true},
-    size2:{type: String, required: true},
-    size3:{type: String, required: true},
-    size4:{type: String, required: true},
-
-  },
-  type:{type: String, required: true},
-  product_details:{type: String, required: true},
-  about:{type: String, required: true},
-  color:{type: String, required: true},
-
+  image: [imageSchema], // Birden çok resim için bir dizi
+  gender: { type: String, required: true },
+  sizes: [sizeSchema], // Birden çok ölçü için bir dizi
+  type: { type: String, required: true },
+  product_details: { type: String, required: true },
+  about: { type: String, required: true },
+  color: { type: String, required: true },
   name: { type: String, required: true },
   price: { type: Number, required: true },
 });
@@ -74,25 +65,10 @@ app.get("/", (req, res) => {
   app.post("/products", (req, res) => {
     const product = new Products({
       image1: req.body.image1,
-      // image2: req.body.image1,
-      // image3: req.body.image1,
-      // image4: req.body.image1,
-      // image:{
-      //   img: req.body.image.img,
-      //   img: req.body.image.img,
-      //   img: req.body.image.img,
-      //   img: req.body.image.img,
-
-      // } ,
       image:req.body.image,
       gender: req.body.gender,
-      size:{
-        size1: req.body.size.size1,
-        size2: req.body.size.size2,
-        size3: req.body.size.size3,
-        size4: req.body.size.size4,
-
-      } ,
+      sizes:
+         req.body.sizes,
       type: req.body.type,
       product_details:req.body.product_details,
       about: req.body.about,
@@ -148,7 +124,7 @@ app.delete("/products/:id", (req, res) => {
   });
 });
 
-//update user
+//update product
 
 app.put('/products/:id',(req,res)=>{
   const {id}=req.params

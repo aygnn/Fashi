@@ -29,7 +29,7 @@ export default function Navbar1() {
   const FAV=useSelector(state=>state.basketitem.favcount)
 
 
-  console.log(useLocation());
+  // console.log(useLocation());
   const [searchParams, setSearchParams] = useSearchParams();
 
   const postQuery = searchParams.get('post') || '';

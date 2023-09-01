@@ -23,6 +23,7 @@ const Login = Yup.object().shape({
       /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
       "Please entered the Correct password!"
     ),
+    
 });
 
 export default function LoginPage() {

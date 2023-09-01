@@ -26,12 +26,7 @@ const UserSchema = new mongoose.Schema(
             required: true,
             select:true
         },
-        posts: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Post',
-            },
-        ],
+     
         userwishlist:{
             type:Array,
             required:false
