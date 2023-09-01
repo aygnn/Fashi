@@ -9,7 +9,7 @@ let counter = 0;
 let subtotal = 0;
 (user?.usercheckout || []).forEach((element) => {
   counter += element.count;
-  subtotal += element.count * element.dataa.price.toFixed(2);
+  subtotal += element.count * element.dataa?.price?.toFixed(2) ;
 });
 
 const initialState = {

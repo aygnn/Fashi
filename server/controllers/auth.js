@@ -5,7 +5,7 @@ import Asyncerror from "express-async-handler";
 import sendJwttoClient from "../helpers/auth/tokenHelpers.js";
 import validateInputs from "../helpers/auth/inputHelpers.js";
 //Register
-export const postUser = Asyncerror(async (req, res, next) => {
+export const postUser = async (req, res, next) => {
   const {
     username,
     isAdmin,
@@ -16,18 +16,28 @@ export const postUser = Asyncerror(async (req, res, next) => {
     subtotal,
     basketCount,
   } = req.body;
-  const user = await User.create({
-    username,
-    isAdmin,
-    password,
-    userwishlist,
-    usercheckout,
-    email,
-    subtotal,
-    basketCount,
-  });
-  sendJwttoClient(user, res);
-});
+
+  console.log("Request Body:", req.body); // req.body'yi loga çıkarmak
+
+  try {
+    const user = await User.create({
+      username,
+      isAdmin,
+      password,
+      userwishlist,
+      usercheckout,
+      email,
+      subtotal,
+      basketCount,
+    });
+
+    sendJwttoClient(user, res);
+  } catch (err) {
+    // Hata işleme kodları burada
+    next(err);
+  }
+};
+
 
 //login
 

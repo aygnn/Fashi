@@ -16,7 +16,7 @@ export default function Basket() {
   userBasket = JSON.parse(localStorage.getItem("user"));
     setBasket(userBasket ? userBasket.usercheckout : []);
   }, [COUNT]);
-  
+  console.log(userBasket);
   const handleCheckout=()=>{
     if(basket.length===0){
       alert('You must add some product to basket!')
@@ -55,26 +55,26 @@ export default function Basket() {
           </div>
         ) : (
           (basket || []).map((item) => (
-            <div className="main" key={item.dataa._id}>
+            <div className="main" key={item.dataa?._id}>
               <div className="cardd">
                 <div className="imagee">
-                  <img src={item.dataa.image1} />
+                  <img src={item.dataa?.image1} />
                 </div>
                 <div className="abouts">
                   <div className="price">
-                    <p>${item.dataa.price} </p>
+                    <p>${item.dataa?.price} </p>
                   </div>
                   <div className="name">
-                    <p onClick={() => handleDetail(item.dataa._id)}>
-                      {item.dataa.name}
+                    <p onClick={() => handleDetail(item.dataa?._id)}>
+                      {item.dataa?.name}
                     </p>
                   </div>
                   <div className="variable">
                     <div className="color">
-                      <p>{item.dataa.color}</p>
+                      <p>{item.dataa?.color}</p>
                     </div>
                     <div className="size">
-                      <p>{item.dataa.size.size1}</p>
+                      <p>{item.dataa?.size.size1}</p>
                     </div>
                     <div className="count">
                       <p>Qty:{item.count}</p>
