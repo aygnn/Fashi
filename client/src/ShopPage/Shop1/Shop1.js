@@ -192,7 +192,7 @@ console.log(checked);
       <ToastContainer />
       <div className="top">
         <Container>
-          <div class="text">
+          <div className="text">
             <Link to={"/"}>
               <FaHome /> Home
             </Link>
@@ -221,7 +221,7 @@ console.log(checked);
                           
                           onChange={() => handleGender(item)}
                         />
-                        <label class="cs-women" htmlFor="cs-women">
+                        <label className="cs-women" htmlFor="cs-women">
                           {item}
                         </label>
                       </Form>
@@ -238,7 +238,7 @@ console.log(checked);
                           id="custom-switch"
                           onChange={() => handleGender2(item)}
                         />
-                        <label class="cs-women" htmlFor="cs-women">
+                        <label className="cs-women" htmlFor="cs-women">
                           {item}
                         </label>
                       </Form>
@@ -250,18 +250,18 @@ console.log(checked);
                 </ul>
               </div>
 
-              <div class="filter">
+              <div className="filter">
                 <h4>Color</h4>
                 <div className="color-choose">
                   {state.color.map((item) => (
-                    <div class="cs-item">
+                    <div className="cs-item">
                       <Checkbox
                         {...label}
                         onChange={() => handleColor(item)}
                         type="checkbox"
                         id="cs-black"
                       />
-                      <label class="cs-black" htmlFor="cs-black">
+                      <label className="cs-black" htmlFor="cs-black">
                         {item}
                       </label>
                       <div
@@ -273,18 +273,18 @@ console.log(checked);
                 </div>
               </div>
 
-              <div class="filter">
-                <h4 class="fw-title">Type</h4>
-                <div class="fw-size-choose">
+              <div className="filter">
+                <h4 className="fw-title">Type</h4>
+                <div className="fw-size-choose">
                   {state.kind.map((item) => (
-                    <div class="sc-item">
+                    <div className="sc-item">
                       <Checkbox
                         {...label}
                         onChange={() => handleType(item)}
                         type="checkbox"
                         id="s-size"
                       />
-                      <label for="s-size">{item}</label>
+                      <label htmlFor="s-size">{item}</label>
                     </div>
                   ))}
                 </div>

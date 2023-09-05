@@ -83,6 +83,7 @@ export default function LoginPage() {
                   axios
                     .post("https://fashi-git-master-aygnn.vercel.app/login", values)
                     .then((res) => {
+                      console.log(res.data);
                       users.forEach((element) => {
                         if (element.username === res.data.data.username) {
                           localStorage.setItem("user", JSON.stringify(element));

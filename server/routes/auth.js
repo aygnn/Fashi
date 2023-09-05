@@ -1,33 +1,27 @@
 import { Router } from 'express'
- import {login,postUser,getUsers,getUserById,UpdateUser} from '../controllers/auth.js'
-
-
+ import {login,postUser} from '../controllers/auth.js'
 
 const router = new Router()
 
+
+router.get('/',(req,res)=>{
+    res.send("Auth")
+})
+
 // Register
-// http://localhost:6060/products/auth
-router.post('/auth', postUser)
+// http://localhost:6060/auth/register
+router.get('/register',(req,res)=>{
+    res.send("Reg")
+})
+router.post('/register', postUser)
+
 
 
 // Login
-// http://localhost:6060/products/auth/login
+// http://localhost:6060/auth/login
 router.post('/login', login)
 
 
-
-
-// Get Me
-// http://localhost:6060/products/auth/me
-router.get('/auth',getUsers)
-
-//get by id 
-
-router.get('/auth/:id', getUserById);
-
-
-//UPDATE
-router.put("/auth/:id", UpdateUser)
 
 export default router
 

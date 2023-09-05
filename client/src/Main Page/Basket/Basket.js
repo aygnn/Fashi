@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { deleteitem } from "../../Config/BasketSlice";
 
+
 export default function Basket() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -15,8 +16,8 @@ export default function Basket() {
   useEffect(() => {
   userBasket = JSON.parse(localStorage.getItem("user"));
     setBasket(userBasket ? userBasket.usercheckout : []);
-  }, [COUNT]);
-  console.log(userBasket);
+  }, [COUNT,TOTAL]);
+  // console.log(userBasket);
   const handleCheckout=()=>{
     if(basket.length===0){
       alert('You must add some product to basket!')
@@ -36,6 +37,7 @@ export default function Basket() {
   const handleDetail = (id) => {
     navigate(`/view/${id}`);
   };
+  
 
   return (
     <div className="bags">

@@ -8,16 +8,15 @@ import validateInputs from "../helpers/auth/inputHelpers.js";
 export const postUser = async (req, res, next) => {
   const {
     username,
-    isAdmin,
+    email,
     password,
+    isAdmin,
     userwishlist,
     usercheckout,
-    email,
     subtotal,
     basketCount,
   } = req.body;
 
-  console.log("Request Body:", req.body); // req.body'yi loga çıkarmak
 
   try {
     const user = await User.create({
@@ -58,6 +57,7 @@ export const login = Asyncerror(async (req, res, next) => {
   sendJwttoClient(user, res);
 });
 
+
 //get users
 
 export const getUsers = Asyncerror(async (req, res, next) => {
@@ -87,6 +87,8 @@ export const getUserById = Asyncerror(async (req, res) => {
     }
   });
 });
+
+//update user
 export const UpdateUser = async (req, res, next) => {
   const { id } = req.params
   try {
@@ -97,4 +99,15 @@ export const UpdateUser = async (req, res, next) => {
       next(err)
   }
 
+}
+//delete user
+export const DeleteUser = async (req, res, next) => {
+  const { id } = req.params
+  try {
+      User.findByIdAndDelete(id, (err) => {
+          res.status(200).json({ message: "Delete" })
+      })
+  } catch (err) {
+      next(err)
+  }
 }

@@ -1,22 +1,26 @@
 import bodyParser from 'body-parser';
-import routers from './routes/index.js';
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import cors from 'cors'
-// import wishlistController from './controllers/wishlistController.js';
+import auth from './routes/auth.js';
+import userRouter from './routes/userRouter.js';
 
 
 const app = express();
-app.use(bodyParser.json());
-// app.use('/wishlist', wishlistController);
-
 app.use(cors());
+app.use(bodyParser.json());
 dotenv.config();
+
 
 //routes
 // http://localhost:6060
-app.use('/',routers)
+// app.use('/',routers)
+
+//auth
+app.use("/auth",auth)
+//users
+app.use('/users',userRouter)
 
 
  const PORT = process.env.PORT;
