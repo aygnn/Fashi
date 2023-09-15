@@ -14,31 +14,30 @@ import {
   handleBasket,
 } from "../Config/BasketSlice";
 import { ToastContainer, toast } from "react-toastify";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";  
 import { CloseButton } from "../FavPage/CloseButton";
 
 export default function Viewbag() {
   const [fav, setFav] = useState("save-fav");
   const [notifications, setNotifications] = useState([0]);
-
   const [active, setActive] = useState(null)
 
+  let user = JSON.parse(localStorage.getItem("user"))
 
   const COUNT = useSelector((state) => state.basketitem.count);
-  const TOTAL = useSelector((state) => state.basketitem.total);
-  const HEART = useSelector((state) => state.basketitem.heart);
+
 
   const [basket, setBasket] = useState([]);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   let userBasket
-  useEffect(() => {
-     userBasket = JSON.parse(localStorage.getItem("user"));
-    setBasket(userBasket ? userBasket.usercheckout : []);
-  }, [COUNT]);
+  // useEffect(() => {
+  //    userBasket = JSON.parse(localStorage.getItem("user"));
+  //   setBasket(userBasket ? userBasket.usercheckout : []);
+  // }, [COUNT]);
 
   const handleCheckout=()=>{
-    if(basket.length===0){
+    if(user?.usercheckout.length===0){
       alert('You must add some product to basket!')
       navigate('/Shop')
       
@@ -51,7 +50,6 @@ export default function Viewbag() {
   }
   const handleDelete = (item) => {
     dispatch(deleteitem(item));
-    console.log(item);
   };
   const handleDetail = (id) => {
     navigate(`/view/${id}`);
@@ -74,6 +72,18 @@ export default function Viewbag() {
   const handleDecrement = (product) => {
     dispatch(decrementproduct(product));
   };
+  let total=0
+  user?.usercheckout?.forEach(element => {
+    try {
+      total+=element.count*element.dataa.price
+      total.toFixed(2)
+    } catch (error) {
+      console.log(error);
+      
+    }
+    
+  });
+
   return (
     <div className="viewbag">
         <Helmet>
@@ -102,7 +112,7 @@ export default function Viewbag() {
                   </div>
                 </div>
               ) : (
-                basket.map((item) => (
+                user?.usercheckout.map((item) => (
                   <AnimatePresence initial={false}>
                     <motion.div
                       key={item.dataa._id}
@@ -187,7 +197,7 @@ export default function Viewbag() {
 
             <div className="bag-subtotal">
               <span className="bag-subtotal">Sub-total</span>
-              <span className="bag-price">${TOTAL}</span>
+              <span className="bag-price">${total}</span>
             </div>
           </Col>
           <Col sm={4}>
@@ -198,7 +208,7 @@ export default function Viewbag() {
                 </div>
                 <div className="total">
                   <span className="total1">Sub-Total</span>
-                  <span className="total2">${TOTAL}</span>
+                  <span className="total2">${total}</span>
                 </div>
                 <div className="delivery">
                   <span>Delivery</span>

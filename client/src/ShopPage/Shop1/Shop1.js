@@ -102,6 +102,13 @@ console.log(checked);
     setAge(event.target.value);
   };
 
+
+
+
+
+
+  
+
   const handleBuy = (item) => {
     let user = JSON.parse(localStorage.getItem("user"));
 
@@ -112,6 +119,16 @@ console.log(checked);
       dispatch(handleBasket(item));
     }
   };
+
+
+
+
+
+
+
+
+
+
   const handleFav = (item) => {
     let userWish = JSON.parse(localStorage.getItem("user"));
      setActive(item)

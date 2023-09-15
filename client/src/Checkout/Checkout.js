@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Checkout.scss";
+import axios from "axios";
+import { useDispatch } from "react-redux";
 
 import Container from "react-bootstrap/esm/Container";
 import { FaHome } from "react-icons/fa";
@@ -13,6 +15,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field } from "formik";
 import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
+import { handleCheckout } from "../Config/BasketSlice";
 
 const SendSchema = Yup.object().shape({
   email: Yup.string()
@@ -25,22 +28,63 @@ const SendSchema = Yup.object().shape({
   lastname: Yup.string().required(),
   postcode: Yup.number().required().min(4, "Zip code must be 4 digits"),
   phone: Yup.string().required(),
-  cardnumber: Yup.number()
-    .required()
-    .max(16, "Please entered acceptable Card!"),
+  cardNumber: Yup.string()
+  .label('Card number')
+  .max(16, "Please entered acceptable Card!")
+  .required(),
   card_month: Yup.string().required(),
   card_year: Yup.string().required(),
 });
 
 export default function Checkout() {
+  const dispatch = useDispatch();
+
   const COUNT = useSelector((state) => state.basketitem.count);
-  const TOTAL = useSelector((state) => state.basketitem.total);
+  // const TOTAL = useSelector((state) => state.basketitem.total);
   const [basket, setBasket] = useState([]);
+  const [order,setOrder]=useState([])
+  let userBasket = JSON.parse(localStorage.getItem("user"));
   useEffect(() => {
-    let userBasket = JSON.parse(localStorage.getItem("user"));
     setBasket(userBasket ? userBasket.usercheckout : []);
   }, [COUNT]);
 
+  let total=0
+  userBasket?.usercheckout?.forEach(element => {
+    try {
+      total+=element.count*element.dataa.price
+      total.toFixed(2)
+      // console.log(total);
+    } catch (error) {
+      console.log(error);
+      
+    }
+    
+  });
+
+  const handleOrder=()=>{
+    // if(userBasket.usercheckout.length!==0){
+    //   notify()
+    //   userBasket.usercheckout.forEach((item) => {
+    //     userBasket.posts.push(item.dataa);
+    //   });
+    //   userBasket.usercheckout = [];
+    //   localStorage.setItem("user", JSON.stringify(userBasket));
+    //   axios.put(`https://fashi-virid.vercel.app/users/${userBasket._id}`, userBasket.posts,
+    //   {
+    //    headers: {
+    //      "Content-Type": "application/json",
+    //    },
+    //  });
+
+    // }
+    if(userBasket.usercheckout.length!==0){
+      dispatch(handleCheckout())
+      notify()
+    }
+    else{
+      error()
+    }
+  }
   const notify = () =>
     toast.success(" Your order has been received!", {
       position: "top-right",
@@ -52,7 +96,17 @@ export default function Checkout() {
       progress: undefined,
       theme: "light",
     });
-
+  const error = () =>
+    toast.success(" You haven't added anything to your cart yet.", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   return (
     <div className="checkout">
       <Helmet>
@@ -99,7 +153,7 @@ export default function Checkout() {
                   validateOnChange={false}
                   onSubmit={(values, { resetForm }) => {
                     console.log(values);
-                    notify();
+                    // notify();
                     resetForm();
                   }}
                 >
@@ -295,7 +349,7 @@ export default function Checkout() {
                     <li>
                       Product <span>Total</span>
                     </li>
-                    {(basket || []).map((item) => (
+                    {(userBasket.usercheckout || []).map((item) => (
                       <div>
                         <li class="fw-normal">
                           {item.dataa.name}{" "}
@@ -306,16 +360,16 @@ export default function Checkout() {
                       </div>
                     ))}
                     <li class="fw-normal">
-                      Subtotal <span>${TOTAL}</span>
+                      Subtotal <span>${total}</span>
                     </li>
 
                     <li class="total-price">
-                      Total <span>${TOTAL}</span>
+                      Total <span>${total}</span>
                     </li>
                   </ul>
                   <div class="order-btn">
                     <button
-                      onClick={notify}
+                      onClick={handleOrder}
                       type="submit"
                       class="site-btn place-btn"
                     >

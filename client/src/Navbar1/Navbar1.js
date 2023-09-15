@@ -29,31 +29,27 @@ export default function Navbar1() {
   const FAV=useSelector(state=>state.basketitem.favcount)
 
 
-  // console.log(useLocation());
   const [searchParams, setSearchParams] = useSearchParams();
 
   const postQuery = searchParams.get('post') || '';
   const latest = searchParams.has('latest');
-
-  const startsFrom = latest ? 80 : 1;
-
+  // const startsFrom = latest ? 80 : 1;
 
 
-  
+let userWish = JSON.parse( localStorage.getItem('user'))
   useEffect(()=>{
-    let userWish = JSON.parse( localStorage.getItem('user'))
-    setWish(userWish?.userwishlist)
+    setWish(userWish?.userwishlist.length)
     setUser(userWish?.username)
     setWBasket(userWish?.usercheckout)
-    // console.log(user);
 
 
 },[])
-  const logoutHandler = () => {
-    sessionStorage.setItem('userlogin',JSON.stringify(false))
+
+const logoutHandler = () => {
+  window.localStorage.removeItem("user")
+    // sessionStorage.setItem('userlogin',JSON.stringify(false))
     window.location.reload()
   
-      window.localStorage.removeItem("user")
       toast('You are logged out')
   }
 
@@ -87,10 +83,10 @@ export default function Navbar1() {
           <Col sm={3}>
             <div className='icons'>
                 <ul>
-                    <li><Link to={'Saveditems'}><AiOutlineHeart/><sup className='fav'><span>{FAV }</span></sup></Link></li>
-                    <li onClick={()=>{setDisplay(!display)}}><BsBag/><sup className='basket'><span>{COUNT}</span></sup></li>
+                    <li><Link to={'Saveditems'}><AiOutlineHeart/><sup className='fav'><span>{userWish? FAV  :0}</span></sup></Link></li>
+                    <li onClick={()=>{setDisplay(!display)}}><BsBag/><sup className='basket'><span>{userWish? COUNT :0}</span></sup></li>
                     <li>
-                      <div className='login-panel'><FaUserAlt/> {active===true ? (
+                      <div className='login-panel'><FaUserAlt/> {userWish ? (
                   
                     <Link className='user' >
                           <NavDropdown

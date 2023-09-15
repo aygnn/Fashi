@@ -65,7 +65,7 @@ export default function Favpage() {
               </div>
             ) : (
               (wish || []).map((item) => (
-                <AnimatePresence initial={false}>
+                <AnimatePresence initial={false} key={item.dataa._id}>
                   <motion.div
                     key={item.dataa._id}
                     positionTransition

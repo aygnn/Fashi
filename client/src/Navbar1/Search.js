@@ -7,58 +7,57 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 
-export default function Search({postQuery, latest, setSearchParams}) {
-    const [search, setSearch] = useState(postQuery);
-    const [checked, setChecked] = useState(latest);
-    let [loading, setLoading] = useState(true);
+export default function Search({ postQuery, latest, setSearchParams }) {
+  const [search, setSearch] = useState(postQuery);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
-    useEffect(()=>{
-       setLoading(true)
-       setTimeout(()=>{
-        setLoading(false)
-       },3000)
-    },[])
+const normalizeQuery = (query) => {
+  return query.replace(/[^a-zA-Z0-9 ]/g, "").toLowerCase().trim();
+};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const query = form.search.value;
+    const normalizedQuery = normalizeQuery(query);
+    const params = {};
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const form = e.target;
-      
-      const query = form.search.value;
-      const params = {};
-      if (query.length) params.post = query;
-      
-      setSearchParams(params);
-      navigate(`/Shop/?post=${query}`)
-
+    if (normalizedQuery.length) {
+      params.post = normalizedQuery;
     }
+
+    setSearchParams(params);
+    navigate(`/Shop/?post=${normalizedQuery}`);
+  };
+
   return (
     <div>
-         <div className="advanced-search">
-            <form  onSubmit={handleSubmit}>
-              <div className="group">
-                <input type="search" name="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="What do you need?" />
-             
-                <button type="submit" value="Search" >
-                  {/* {
-                    loading?
-               
-            <PulseLoader color={"#e7ab3c"} loading={loading} size={150}/>:
-            <div>
-
-            <BsSearch/>
-               </div>
-                  } */}
-                    <div>
-
-                 <BsSearch/>
-                    </div>
-                </button>
+      <div className="advanced-search">
+        <form onSubmit={handleSubmit}>
+          <div className="group">
+            <input
+              type="search"
+              name="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="What do you need?"
+            />
+            <button type="submit" value="Search">
+              <div>
+                <BsSearch />
               </div>
-                
-            </form>
-            </div> 
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  )
+  );
 }
+

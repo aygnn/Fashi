@@ -7,19 +7,21 @@ import { deleteitem } from "../../Config/BasketSlice";
 
 
 export default function Basket() {
+  let user = JSON.parse(localStorage.getItem("user"))
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [basket, setBasket] = useState([]);
   const COUNT = useSelector((state) => state.basketitem.count);
-  const TOTAL = useSelector((state) => state.basketitem.total);
-  let userBasket
-  useEffect(() => {
-  userBasket = JSON.parse(localStorage.getItem("user"));
-    setBasket(userBasket ? userBasket.usercheckout : []);
-  }, [COUNT,TOTAL]);
+  // const TOTAL = useSelector((state) => state.basketitem.total);
+  // let userBasket
+  // useEffect(() => {
+  // userBasket = JSON.parse(localStorage.getItem("user"));
+  //   setBasket(userBasket ? userBasket.usercheckout : []);
+  // }, [COUNT]);
   // console.log(userBasket);
   const handleCheckout=()=>{
-    if(basket.length===0){
+    if(user?.usercheckout.length===0){
       alert('You must add some product to basket!')
       navigate('/Shop')
       
@@ -37,7 +39,18 @@ export default function Basket() {
   const handleDetail = (id) => {
     navigate(`/view/${id}`);
   };
-  
+  let total=0
+  user?.usercheckout?.forEach(element => {
+    try {
+      total+=element.count*element.dataa.price
+      total.toFixed(2)
+      // console.log(total);
+    } catch (error) {
+      console.log(error);
+      
+    }
+    
+  });
 
   return (
     <div className="bags">
@@ -56,7 +69,7 @@ export default function Basket() {
             </div>
           </div>
         ) : (
-          (basket || []).map((item) => (
+          user.usercheckout.map((item) => (
             <div className="main" key={item.dataa?._id}>
               <div className="cardd">
                 <div className="imagee">
@@ -76,7 +89,7 @@ export default function Basket() {
                       <p>{item.dataa?.color}</p>
                     </div>
                     <div className="size">
-                      <p>{item.dataa?.size.size1}</p>
+                      {/* <p>{item.dataa?.sizes}</p> */}
                     </div>
                     <div className="count">
                       <p>Qty:{item.count}</p>
@@ -99,7 +112,7 @@ export default function Basket() {
           <p>Sub-total</p>
         </div>
         <div className="total">
-          <p>{TOTAL}$</p>
+          <p>{total}$</p>
         </div>
       </div>
       <div className="view_checkout">

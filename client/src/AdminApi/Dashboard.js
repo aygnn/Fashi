@@ -9,8 +9,7 @@ export default function Dashboard() {
   let user=JSON.parse(localStorage.getItem('user')) 
 
   return (
-    <div>
-             
+    <div >
              <Helmet>
     <title>Admin Page</title>
       </Helmet>
@@ -24,8 +23,6 @@ export default function Dashboard() {
       </div>
    
    : <div className="not_found"><h1>You are not Admin!</h1></div>
-   
-   
 }
 <Outlet/>
     </div>

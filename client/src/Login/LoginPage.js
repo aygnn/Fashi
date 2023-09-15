@@ -43,7 +43,7 @@ export default function LoginPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("https://fashi-pbtgesky2-aygnn.vercel.app/auth").then((res) => setUsers(res.data));
+    axios.get("https://fashi-virid.vercel.app/users").then((res) => setUsers(res.data));
   }, []);
 
   return (
@@ -81,18 +81,18 @@ export default function LoginPage() {
                 validationSchema={Login}  
                 onSubmit={async (values) => {
                   axios
-                    .post("https://fashi-git-master-aygnn.vercel.app/login", values)
+                    .post("https://fashi-git-master-aygnn.vercel.app/auth/login", values)
                     .then((res) => {
-                      console.log(res.data);
                       users.forEach((element) => {
                         if (element.username === res.data.data.username) {
                           localStorage.setItem("user", JSON.stringify(element));
                           sessionStorage.setItem(
                             "userlogin",
                             JSON.stringify(true)
-                          );
-                          navigate("/");
-                          window.location.reload();
+                            );
+                            navigate("/");
+                            window.location.reload();
+                            console.log(res.data);
                         }
                       });
                     })

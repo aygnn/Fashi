@@ -15,20 +15,18 @@ export default function Users() {
   const[users,setUsers]=useState([])
 
 const getUsers=()=>{
-  axios.get('https://fashi-git-master-aygnn.vercel.app/auth')
+  axios.get('https://fashi-git-master-aygnn.vercel.app/users')
   .then(res=>setUsers(res.data))
 
 }
 useEffect(()=>{
   getUsers()
 },[])
-console.log(users);
   return (
-    <div>
+    <div className='users'>
       {
-        users.map((item)=>{
+        users.map((item)=>(
          <Card sx={{ maxWidth: 345 }} key={item._id}>
-     
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
          USERNAME: {item.username}
@@ -42,11 +40,11 @@ console.log(users);
       </CardContent>
       <CardActions>
         <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="sm0all">Learn More</Button>
       </CardActions>
     </Card>
 
-        })
+        ))
       }
     </div>
   )

@@ -26,6 +26,10 @@ const UserSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    posts: {
+      type: Array,
+      required: false,
+    },
 
 
     userwishlist: {

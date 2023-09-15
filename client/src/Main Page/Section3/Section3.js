@@ -46,7 +46,7 @@ export default function Section3() {
 const BASKET=useSelector(state=>state.basketitem.value)
 const total=useSelector(state=>state.basketitem.total)
 const FAV=useSelector(state=>state.basketitem.favstate)
-console.log(FAV);
+// console.log(FAV);
 
   const handleBuy=(item)=>{
     let user= JSON.parse( localStorage.getItem('user'))
