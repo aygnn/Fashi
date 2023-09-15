@@ -42,7 +42,6 @@ let userWish = JSON.parse( localStorage.getItem('user'))
     setUser(userWish?.username)
     setWBasket(userWish?.usercheckout)
 
-
 },[])
 
 const logoutHandler = () => {

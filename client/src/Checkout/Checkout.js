@@ -62,24 +62,11 @@ export default function Checkout() {
   });
 
   const handleOrder=()=>{
-    // if(userBasket.usercheckout.length!==0){
-    //   notify()
-    //   userBasket.usercheckout.forEach((item) => {
-    //     userBasket.posts.push(item.dataa);
-    //   });
-    //   userBasket.usercheckout = [];
-    //   localStorage.setItem("user", JSON.stringify(userBasket));
-    //   axios.put(`https://fashi-virid.vercel.app/users/${userBasket._id}`, userBasket.posts,
-    //   {
-    //    headers: {
-    //      "Content-Type": "application/json",
-    //    },
-    //  });
 
-    // }
     if(userBasket.usercheckout.length!==0){
       dispatch(handleCheckout())
       notify()
+
     }
     else{
       error()
@@ -349,7 +336,7 @@ export default function Checkout() {
                     <li>
                       Product <span>Total</span>
                     </li>
-                    {(userBasket.usercheckout || []).map((item) => (
+                    {userBasket?.usercheckout.map((item) => (
                       <div>
                         <li class="fw-normal">
                           {item.dataa.name}{" "}

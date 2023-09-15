@@ -2,22 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import axios from "../utils/axios";
 import round from "lodash.round";
-    
-    // console.log(user);
-    // console.log(counter);
-
-// if (user?.usercheckout?.length === 0) {
-//   user.subtotal = 0;
-//   user.basketCount = 0;
-//   counter = 0;
-//   subtotal = 0;
-//   localStorage.setItem("user", JSON.stringify(user));
-// } else {
-//   (user?.usercheckout || []).forEach((element) => {
-//     user.basketCount += element.count;
-//     user.subtotal += element.count * element.dataa?.price;
-//   });
-// }
 let user = JSON.parse(localStorage.getItem("user"));
 let counter = 0;
     user?.usercheckout?.forEach(elem => {
@@ -83,25 +67,22 @@ const Basketslice = createSlice({
       });
     },
     handleCheckout: (state, actions) => {
-      user = JSON.parse(localStorage.getItem("user"))
-      state.value.push(user.usercheckout);
-      console.log(state.value);
-      let userr = {
-        username: user.username,
-        password: user.password,
-        posts: state.value,
-        userwishlist: state.favstate,
-        usercheckout: [],
-        _id: user._id,
-      };
-      localStorage.setItem("user", JSON.stringify(userr));
-        axios.put(`https://fashi-virid.vercel.app/users/${user._id}`, JSON.stringify(userr), {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }); 
-        console.log(user);
+      const user = JSON.parse(localStorage.getItem("user"));
+      const userCheckoutItems = user.usercheckout;
+      user.usercheckout = [];
+      if (userCheckoutItems.length > 0) {
+        user.posts = [...user.posts, ...userCheckoutItems];
+      }
+      localStorage.setItem("user", JSON.stringify(user));
+      axios.put(`https://fashi-virid.vercel.app/users/${user._id}`, JSON.stringify(user), {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      state.count = 0;
+      state.value = [];
     },
+    
 
     deleteitem: (state, actions) => {
       user = JSON.parse(localStorage.getItem("user"))
